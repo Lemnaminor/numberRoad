@@ -1,0 +1,29 @@
+/** scrollbar **/
+@mixin scrollbar($width, $scrollColor, $bgcolor, $sizeColor, $selectColor, $radius) {
+    %selection {
+        color: $sizeColor;
+        background: $selectColor;
+        text-shadow: none
+    }
+    ::-webkit-scrollbar {
+        width: $width;
+        border-radius: $radius;
+    }
+    ::-webkit-scrollbar-track-piece {
+        border: none;
+        background-color: $bgcolor;
+    }
+    ::-webkit-scrollbar-thumb {
+        width: $width;
+        background: $scrollColor;
+        border-radius: $radius;
+        &:hover {
+            background: darken($scrollColor, 10%)
+        }
+    }
+    ::-moz-selection,
+    ::selection {
+        @extend %selection;
+    }
+    
+}

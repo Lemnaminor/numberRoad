@@ -1,0 +1,9 @@
+%common-border {
+    background: #fff;
+    border: 2px solid $border-color1;
+    @include border-radius(15px);
+}
+
+%btn-bg1 {
+    background: $btnImg1;
+}

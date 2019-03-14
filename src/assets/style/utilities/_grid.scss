@@ -1,0 +1,111 @@
+/** Grid Css **/
+$grid-column: 24;
+$grid-gutter: 1%;
+$cont-width: 1200px;
+
+
+.container {
+    width: $cont-width;
+    margin: 0 auto;
+    @include clearfix();
+}
+
+.row {
+    width: $cont-width + ($cont-width / 100 * 2);
+    @include box-sizing();
+    @include clearfix();
+    margin-left: -($cont-width / 100 * 2) / 2;
+    font-size: 0;
+}
+
+.row2 {
+    width: 100%;
+    @include box-sizing();
+    @include clearfix();
+    font-size: 0;
+}
+
+/** 解决@media不能不能扩展问题，模块都用@minxi包裹 **/
+@mixin container-response($grid-gutter) {
+    .container {
+        width: 100%;
+        .row {
+            width: 100% + $grid-gutter * 2;
+            margin-left: -$grid-gutter;
+        }
+    }
+}
+
+@mixin row-child($grid-gutter) {
+    display: inline-block;
+    @include box-sizing();
+    margin: 0 $grid-gutter;
+    vertical-align: top;
+    font-size: $font-size-14;
+}
+
+
+@mixin col-lg($grid-column) {
+    @for $i from 1 through $grid-column {
+        .col-lg-#{$i} {
+            @include row-child($grid-gutter);
+            width: percentage((1 / $grid-column) * $i) - 2%;
+        }
+    }
+}
+
+@mixin col-md($grid-column) {
+    @for $i from 1 through $grid-column {
+        .col-md-#{$i} {
+            @include row-child($grid-gutter);
+            width: percentage((1 / $grid-column) * $i) - 2%;
+        }
+    }
+}
+
+@mixin col-sm($grid-column) {
+    @for $i from 1 through $grid-column {
+        .col-sm-#{$i} {
+            @include row-child($grid-gutter);
+            width: percentage((1 / $grid-column) * $i) - 2%;
+        }
+    }
+}
+
+@mixin col-xs($grid-column) {
+    @for $i from 1 through $grid-column {
+        .col-xs-#{$i} {
+            @include row-child($grid-gutter);
+            width: percentage((1 / $grid-column) * $i) - 2%;
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 1201px) {
+
+    @include col-lg($grid-column);
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    @include container-response($grid-gutter);
+    @include col-md($grid-column);
+
+}
+
+@media screen and (max-width: 768px) {
+
+    @include container-response($grid-gutter);
+    @include col-sm($grid-column);
+
+}
+
+@media screen and (max-width: 481px) {
+
+    @include container-response($grid-gutter);
+    @include col-xs($grid-column);
+
+}

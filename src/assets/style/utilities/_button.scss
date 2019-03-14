@@ -1,0 +1,22 @@
+/** Button Scss **/
+$btn-size-color1: #fff;
+$btn-bg-color1: rgb(62,188,202);
+
+
+.btn-box1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    a {
+        display: inline-block;
+        color: $btn-size-color1;
+        background-color: $btn-bg-color1;
+        padding: 7px 30px;
+        border-radius: 4px;
+        @include transition(all 300ms);
+        &:hover {
+            background-color: darken($color: $btn-bg-color1, $amount: 3%)
+        }
+    }
+}

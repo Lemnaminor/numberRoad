@@ -1,0 +1,24 @@
+/** plugin css **/
+/* Waterbtn */
+.WaterBtn {
+    position: relative;
+    overflow: hidden;
+    @include transition(all 0.2s ease);
+    z-index: 0;
+}
+.water {
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.45);
+    @include border-radius(100%);
+    @include transform(scale(0));
+}
+.drop-animate {
+    @include animation(dropper 0.65s linear);
+}
+@include keyframes(dropper) {
+    100% {
+        @include opacity(0);
+        @include transform(scale(2.5));
+    }
+}

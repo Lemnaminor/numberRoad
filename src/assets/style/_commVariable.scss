@@ -1,0 +1,27 @@
+body,html {
+    width: 100%;
+    height: 100%;
+    background: $bgImg;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 640px){
+    body,html {
+        background: #fff!important;
+    }
+    #app {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 500px;
+        height: 100%;
+        background: $bgImg;
+        margin-left: -250px;
+    }
+    .game-prompt {
+        width: 500px!important;
+        left: 50%!important;
+        margin-left: -250px;
+    }
+}

@@ -1,0 +1,92 @@
+/** PC reset **/
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form, figure, figcaption {
+    margin:0px;
+}
+ul, ol {
+    list-style:none;
+    margin:0px;
+    padding:0px;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    color: $sizeColor;
+    background-color: $bgColor;
+    background-image: $bgImg;
+    background-size: cover;
+    overflow-x:hidden;
+    font:1.4rem $pcFont;
+    touch-action: none;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight:normal;
+}
+
+
+a, img, button, input, textarea {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+%highlight {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+@each $item in a, img, button, input, textarea {
+    #{$item} {
+        @extend %highlight;
+    }
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], textarea {
+    -webkit-appearance: none;
+}
+
+// clear virtual box
+a{
+    color: $sizeColor;
+    outline:none;
+    text-decoration:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    &:focus{
+        outline:0;
+    }
+    &:link, 
+    &:visited {
+        color: $sizeColor;
+        text-decoration:none;
+    }
+}
+a img {
+    border:none;
+}
+input, textarea, select {
+    outline:none;
+    font:12px/1.5 $pcFont;
+}
+
+// iconfont
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.cont {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+// clearfix
+.clearfix {
+    @include clearfix;
+}
+
+// scrollbar
+@include scrollbar(0px, rgba(0,0,0,0), #fff, #fff, #348fff, 3px);

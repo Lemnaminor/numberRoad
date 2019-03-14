@@ -1,0 +1,234 @@
+.gameIndex-box {
+    font-size: 2rem;
+    .game-navbar {
+        position: relative;
+        text-align: center;
+        margin-top: 2rem;
+        @include box-sizing();
+        a {
+            display: inline-block;
+            color: #fff;
+            padding: .1rem 1rem;
+            @extend %btn-bg1;
+            @include border-radius(5px);
+            em {
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+        &>a:first-child {
+            position: absolute;
+            left: 5%;
+        }
+        &>a:last-child {
+            position: absolute;
+            right: 5%;
+        }
+        &>span {
+            background: #fff;
+            border: 2px solid $comColor1;
+            padding: .4rem 2rem;
+            font-weight: bold;
+            @include border-radius(5px);
+        }
+    }
+    .game-cont {
+        position: relative;
+        width: 100%;
+        margin: 3rem 0;
+        padding: 0 3%;
+        @include box-sizing();
+        &>p {
+            text-align: center;
+            color: $comColor1;
+            margin-bottom: 2rem;
+            font-weight: bold;
+            font-size: 2.2rem;
+        }
+        .time-box {
+            position: absolute;
+            left: 3%;
+            background: #fff;
+            border: 2px solid $gameColor3;
+            padding: .1rem .5rem;
+            @include border-radius(5px);
+            i {
+                color: $gameColor1;
+            }
+        }
+        .game-menu1 {
+            position: absolute;
+            left: 3%;
+            width: 94%;
+            background: $gameColor1;
+            border: 5px solid $gameColor3;
+            padding: 0;
+            text-decoration: none;
+            list-style-type: none;
+            font-size: 0;
+            @include box-sizing();
+            li {
+                position: relative;
+                float: left;
+                width: 33.333333%;
+                text-align: center;
+                border: 1px solid $gameColor1;
+                padding-top: 33.333333%;
+                @include box-sizing();
+                &>div {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $gameColor2;
+                    &>span {
+                        display: inline-block;
+                        margin-top: 50%;
+                        -webkit-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                        font-style: italic;
+                        font-size: 6rem;
+                    }
+                }
+            }
+            .btn-box2 {
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                margin-top: 115%;
+                .gameStart {
+                    color: #fff;
+                    padding: 1rem 3rem;
+                    font-size: 2.2rem;
+                    @extend %btn-bg1;
+                    @include border-radius(5px);
+                }
+            }
+        }
+    }
+    .game-prompt {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        background: rgba(0,0,0,.7);
+        @include box-sizing();
+        &>strong {
+            display: block;
+            color: yellow;
+            letter-spacing: 1rem;
+            margin: 35% 0 10%;
+            font-size: 4rem;
+        }
+        &>p {
+            margin-bottom: 5%;
+            span {
+                color: orange;
+                i {
+                    font-size: 20px;
+                }
+            }
+            strong {
+                color: #fff;
+            }
+        }
+        .prompt-btn {
+            position: absolute;
+            bottom: 12%;
+            width: 100%;
+            &>span {
+                display: inline-block;
+                margin: 0 .3rem;
+                padding: .7rem 2rem;
+                @extend %btn-bg1;
+                @include border-radius(5px);
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+}
+
+$level3-width: 33.333333%!important;
+$level4-width: 25%!important;
+$level5-width: 20%!important;
+$level6-width: 16.666666%!important;
+$level7-width: 14.285714%!important;
+$level8-width: 12.5%!important;
+
+$level3-size: 6rem!important;
+$level4-size: 5rem!important;
+$level5-size: 4.5rem!important;
+$level6-size: 3.5rem!important;
+$level7-size: 3rem!important;
+$level8-size: 2.5rem!important;
+
+.level3 {
+    li {
+        width: $level3-width;
+        padding-top: $level3-width;
+        span {
+            font-size: $level3-size;
+        }
+    }
+}
+.level4 {
+    li {
+        width: $level4-width;
+        padding-top: $level4-width;
+        span {
+            font-size: $level4-size;
+        }
+    }
+}
+.level5 {
+    li {
+        width: $level5-width;
+        padding-top: $level5-width;
+        span {
+            font-size: $level5-size;
+        }
+    }
+}
+.level6 {
+    li {
+        width: $level6-width;
+        padding-top: $level6-width;
+        span {
+            font-size: $level6-size;
+        }
+    }
+}
+.level7 {
+    li {
+        width: $level7-width;
+        padding-top: $level7-width;
+        span {
+            font-size: $level7-size;
+        }
+    }
+}
+.level8 {
+    li {
+        width: $level8-width;
+        padding-top: $level8-width;
+        span {
+            font-size: $level8-size;
+        }
+    }
+}
+
+.empty {
+    &>div {
+        color: transparent;
+        background: $gameColor1!important;
+    }
+}
+

@@ -1,0 +1,47 @@
+
+.checkPoint_box {
+    font-size: 2rem;
+    .game-title {
+        @extend %btn-bg1;
+        color: #fff;
+        text-align: center;
+        padding: .5rem 0;
+        font-weight: bold;
+        font-size: 2.2rem;
+    }
+    .game-select {
+        text-align: center;
+        color: $comColor1;
+        margin-top: 2rem;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    .btn-menu1 {
+        display: block;
+        width: 100%;
+        padding: 0;
+        font-size: 0;
+        li {
+            display: inline-block;
+            width: 33.333333%;
+            text-align: center;
+            margin: 2rem 0 0;
+            font-size: 2rem;
+            a {
+                display: inline-block;
+                color: #fff;
+                padding: .5rem 2rem;
+                @extend %btn-bg1;
+                @include border-radius(5px);
+            }
+        }
+    }
+    .game-rules {
+        width: 100%;
+        margin-top: 3rem;
+        padding: 0 3%;
+        text-align: justify;
+        @include box-sizing();
+    }
+}
+

@@ -1,0 +1,47 @@
+/** Page **/
+$bg-color1: rgba(255,255,255,.65);
+$page-width: 3rem;
+$page-color1: #b0080f;
+
+.page-box1 {
+    display: block;
+    width: 100%;
+    ul {
+        text-align: center;
+        li {
+            display: inline-block;
+            min-width: $page-width;
+            height: $page-width;
+            line-height: $page-width;
+            color: #333;
+            background: $bg-color1;
+            @include box-sizing();
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 0 .2rem;
+            padding: 0 .5rem;
+            @include transition(all 100ms);
+            font-size: 1.3rem;
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                color: #333;
+                font-size: 1.3rem;
+            }
+            &:hover {
+                border: 1px solid $page-color1;
+                a {
+                    color: $page-color1;    
+                }
+            }
+        }
+        .page-active1 {
+            border: 1px solid $page-color1;
+            background: $page-color1;
+            a {
+                color: #fff!important;
+            }
+        }
+    }
+}

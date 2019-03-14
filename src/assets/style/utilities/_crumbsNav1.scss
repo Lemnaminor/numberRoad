@@ -1,0 +1,32 @@
+/** crumbsNav1 scss **/
+
+
+.crumbs-nav1 {
+    position: relative;
+    width: 100%;
+    >i {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        color: $size-color2;
+        vertical-align: middle;
+        margin-top: -1px;
+        font-size: $font-size-14;
+    }
+    >ul {
+        display: block;
+        color: $size-color3;
+        @include box-sizing();
+        padding: 0 20px;
+        >li {
+            display: inline-block;
+            >a {
+                color: $size-color3;
+                &:hover {
+                    color: $size-color2;
+                }
+            }
+        }
+    }
+}

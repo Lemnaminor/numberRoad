@@ -1,0 +1,57 @@
+/* mobile reset */
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form, figure, figcaption {
+    margin:0px;
+}
+// change box model
+section, article, nav, aside, footer, header, div, p, ul, li, input, textarea {
+    display: block;
+    // @include box-sizing;
+}
+html, body {
+    -webkit-user-select: none;
+    // 禁止选中文本
+    user-select: none;
+    -webkit-text-size-adjust: 100%;
+    // iphone禁用文字大小调整
+    -ms-text-size-adjust: 100%;
+}
+html {
+    font-size:62.5%;
+}
+body{
+    font:.16rem/1.6 $mobileFont; 
+    color:#333;
+    -webkit-overflow-scrolling: touch;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight:normal;
+}
+// clear virtual box
+a, div, p, span, ul, li, i, img, input {
+    outline:0;
+    text-decoration:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+a:focus{
+    outline:0;
+}
+a:link,a:visited{
+    color:$defaultColor;
+    text-decoration:none;
+}
+a img{
+    border:0 none;
+}
+a, img {
+    -webkit-touch-callout: none;
+    // 禁止长按链接与图片弹出菜单
+}
+input, textarea, select {
+    outline: none;
+    color: $defaultColor;
+    font-family: $mobileFont;
+}
+input {
+    // 清除 iphone 中 input 默认样式
+    -webkit-appearance: none;
+}

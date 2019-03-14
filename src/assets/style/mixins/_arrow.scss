@@ -1,0 +1,35 @@
+/** arrow **/
+@mixin arrow($direction, $size, $color) {
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border-width: $size;
+    border-#{$direction}: none;
+    overflow: hidden;
+    font-size: 0;
+
+    @if $direction == top {
+        border: {
+            style: dashed dashed solid dashed;
+            color: transparent transparent $color transparent;
+        }
+    }
+    @else if $direction == bottom {
+        border: {
+            style: solid dashed dashed dashed;
+            color: $color transparent transparent transparent;
+        }
+    }
+    @else if $direction == right {
+        border: {
+            style: dashed dashed dashed solid;
+            color: transparent transparent transparent $color;
+        }
+    }
+    @else if $direction == left {
+        border: {
+            style: dashed solid dashed dashed;
+            color: transparent $color transparent transparent;
+        }
+    }
+}
