@@ -4,6 +4,7 @@
 > 项目是初学vue用来练手的小项目，希望和各位同学一起学习进步。<br>
 > 如果此项目对您有所帮助，请为它点亮一颗star。^-^<br>
 > 在线试玩游戏地址：http://www.diudiuo.com/project/numberRoad/index.html
+备注：游戏彩蛋（BUG），随机重排有概率会出现无解情况。
 
 ## Build Setup
 
